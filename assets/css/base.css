@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    //background: linear-gradient(135deg, #008, #888, #800);
+    background:linear-gradient(135deg, blue, white, red);
+    color: white;
+    font-size:24px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+}
+a:visited {
+    color: lightblue;
+}

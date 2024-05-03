@@ -1,0 +1,65 @@
+table#schedule {
+     text-align: left;
+     font-size: 20px;
+}
+
+table#schedule th, table#schedule td {
+     border: 1px solid lightgray;
+     padding: 20px;
+}
+
+#schedule th {
+     font-size: 24px;
+}
+
+.photo-speaker {
+     vertical-align: top;
+     align-items: left;
+     height: 60px;
+     border-radius: 50px;
+}
+
+.event {
+     display: inline-block;
+     margin-left: 8px;
+     max-width: 80%;
+}
+
+.title {
+     font-weight: bold;
+}
+
+.author {
+     color: cyan;
+     font-weight: bold;
+     font-style: italic;
+}
+
+.level, .category {
+     color: black;
+     padding: 2px 6px;
+     border-radius: 15px;
+     display: inline-block;
+}
+
+.level.Básico {
+     background: green;
+}
+.level.Intermedio {
+     background: yellow;
+}
+.level.Avanzado {
+     background: red;
+}
+
+.category.Data {
+     background: orange;
+}
+
+.category.Web {
+     background: cyan;
+}
+
+.category.Auto {
+     background: magenta;
+}

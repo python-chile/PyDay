@@ -1,0 +1,18 @@
+.main-logo {
+    height: 256px;
+}
+.past-logo {
+    height: 128px;
+}
+.dark-background {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    margin-top: 32px;
+    padding:16px;
+}
+.past-events {
+    display: flex
+}
+.past-events div {
+    margin: 32px
+}
