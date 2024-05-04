@@ -11,8 +11,9 @@
     padding:16px;
 }
 .past-events {
-    display: flex
+    display: flex;
+    justify-content: center;
 }
 .past-events div {
-    margin: 32px
+    margin: 32px;
 }

@@ -16,3 +16,10 @@ th, td {
 a:visited {
     color: lightblue;
 }
+button {
+    background: blue;
+    color:white;
+    padding: 16px;
+    font-size: 24px;
+    margin: 8px;
+}
