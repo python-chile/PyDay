@@ -3,7 +3,7 @@
 Repositorio de PyDay Chile 2024
 Website: https://www.pyday.cl/
 
-# Ejecución
+## Ejecución
 python -m http.server
 Acceso por browser en http://localhost:8000
 
