@@ -6,7 +6,6 @@ jobs:
   deploy-prod:
     if: github.ref == 'refs/heads/main'
     runs-on: [ubuntu-latest]
-    environment: pyday2024
     steps:
       - uses: actions/checkout@v1
       - name: Push to server
