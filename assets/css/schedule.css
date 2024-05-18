@@ -1,15 +1,20 @@
 table#schedule {
      text-align: left;
      font-size: 20px;
+     margin: 0px 4%;
 }
 
 table#schedule th, table#schedule td {
-     border: 1px solid lightgray;
+     border: solid 12px rgb(248, 249, 250);
      padding: 20px;
 }
 
 #schedule th {
      font-size: 24px;
+}
+
+#schedule td.content {
+     display: flex;
 }
 
 .photo-speaker {
@@ -30,7 +35,7 @@ table#schedule th, table#schedule td {
 }
 
 .author {
-     color: cyan;
+     color: #888;
      font-weight: bold;
      font-style: italic;
 }
@@ -45,9 +50,11 @@ table#schedule th, table#schedule td {
 .level.Básico {
      background: green;
 }
+
 .level.Intermedio {
      background: yellow;
 }
+
 .level.Avanzado {
      background: red;
 }
@@ -61,5 +68,6 @@ table#schedule th, table#schedule td {
 }
 
 .category.Auto {
-     background: magenta;
+     background: #808;
+     color: white;
 }

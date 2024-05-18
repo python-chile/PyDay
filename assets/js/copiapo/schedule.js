@@ -65,7 +65,7 @@ export default () => {
         author: 'Andrés Ibañez',
         title: 'Ciencia de datos y python',
         photos: ['Andres_Ibanez.jpeg'],
-        category: 'Datos'},
+        category: 'Data'},
     {
         block: '11:55 - 12:10',
         author: 'Eduardo Espinoza Norambuena',
@@ -114,14 +114,18 @@ export default () => {
         const blockCell = row.insertCell();
         blockCell.innerHTML = obj.block;
         const eventCell = row.insertCell();
+        eventCell.className = "content"
+        const profileDiv = document.createElement("div");
+        const photosDiv = document.createElement("div");
+        const mediaDiv = document.createElement("div");
+        const eventDiv = document.createElement("div");
+        eventDiv.className='event';
         obj.photos.forEach(photo => {
             const img = document.createElement('img')
             img.className='photo-speaker';
             img.src= 'assets/speakers/copiapo/'+ photo;
-            eventCell.appendChild(img)
+            photosDiv.appendChild(img)
         });
-        const eventDiv = document.createElement("div");
-        eventDiv.className='event'
         const titleDiv = document.createElement("div");
         titleDiv.className = 'title';
         titleDiv.innerHTML = obj.title;
@@ -142,6 +146,31 @@ export default () => {
             categoryDiv.innerHTML = obj.category;
             eventDiv.appendChild(categoryDiv);
         }
+        let link, icon
+        const urls = {
+            github: 'https://github.com/',
+            facebook: 'https://www.facebook.com/',
+            instagram: 'https://www.instagram.com/',
+            youtube: 'https://www.youtube.com/',
+            twitter: 'https://x.com/',
+            linkedin: 'https://www.linkedin.com/',
+            twitch: 'https://www.twitch.com/',
+            discord: 'https://discord.gg/',
+        }
+        Object.keys(urls).forEach(key=>{
+            if (key in obj){
+                link = document.createElement("a");
+                link.href = `${urls[key]}${obj[key]}`;
+                link.target = '_blank'
+                icon = document.createElement("i");
+                icon.className = `bi bi-${key}`
+                link.appendChild(icon);
+                mediaDiv.appendChild(link);
+            }
+            })
+        profileDiv.appendChild(photosDiv)
+        profileDiv.appendChild(mediaDiv)
+        eventCell.appendChild(profileDiv)
         eventCell.appendChild(eventDiv)
     })
 }
