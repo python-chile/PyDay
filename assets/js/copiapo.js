@@ -1,8 +1,8 @@
 const FILES =[
     'header.html',
     'about.html',
-    'location.html',
     'schedule.html',
+    'location.html',
     'gallery.html',
     '../footer.html'
     ]
