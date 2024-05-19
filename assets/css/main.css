@@ -198,8 +198,9 @@
 }
 
 /* Estilo para el carrusel */
-.carousel-item img {
-    height: 700px;
+#galeria .carousel-item img {
+    height: auto;
+    max-height: 75vh;
     object-fit: cover;
 }
 
