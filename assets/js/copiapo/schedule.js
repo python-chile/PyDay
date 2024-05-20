@@ -115,11 +115,18 @@ export default () => {
         blockCell.innerHTML = obj.block;
         const eventCell = row.insertCell();
         eventCell.className = "content"
+
         const profileDiv = document.createElement("div");
+        profileDiv.className = "d-flex align-items-center";
+
         const photosDiv = document.createElement("div");
+        photosDiv.className = "photo-speaker-container";
+
         const mediaDiv = document.createElement("div");
+
         const eventDiv = document.createElement("div");
-        eventDiv.className='event';
+        eventDiv.className = 'event ml-3';
+        
         obj.photos.forEach(photo => {
             const img = document.createElement('img')
             img.className='photo-speaker';
@@ -170,7 +177,8 @@ export default () => {
             })
         profileDiv.appendChild(photosDiv)
         profileDiv.appendChild(mediaDiv)
+        profileDiv.appendChild(eventDiv)
         eventCell.appendChild(profileDiv)
-        eventCell.appendChild(eventDiv)
+        
     })
 }

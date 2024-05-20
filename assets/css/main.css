@@ -81,7 +81,7 @@
 
 
 
-/* Estilos para la sección de Cronograma */
+/* Estilos para la sección de Cronograma 
 #cronograma {
     background-color: #f8f9fa;
     padding: 3rem 0;
@@ -113,6 +113,7 @@
 #cronograma .social-icons .bi:hover {
     color: #007bff;
 }
+*/
 
 
 /* Estilos para la sección de Ubicación */
@@ -278,3 +279,4 @@
         
     }
 }
+
