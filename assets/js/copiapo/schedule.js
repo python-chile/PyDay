@@ -114,6 +114,7 @@ export default () => {
         const blockCell = row.insertCell();
         blockCell.innerHTML = obj.block;
         const eventCell = row.insertCell();
+        
         eventCell.className = "content"
 
         const profileDiv = document.createElement("div");

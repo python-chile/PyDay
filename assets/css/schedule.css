@@ -23,9 +23,11 @@
 }
 
 #schedule th {
-    background-color: #343a40;
+    background-color: #485460;
     color: #fff;
     font-weight: bold;
+    text-align: center;
+    
 }
 
 #schedule tbody tr:nth-child(even) {
@@ -42,8 +44,8 @@
 
 
 .photo-speaker {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-right: 0.5rem;
     object-fit: cover;
