@@ -204,3 +204,23 @@
     object-fit: cover;
 }
 
+/* Estilos para la sección de Organizador */
+#organizador {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+#organizador h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+#organizador p {
+    font-size: 1.25rem;
+}
+
+#organizador img {
+    max-width: 100%;
+    height: auto;
+}
