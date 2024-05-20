@@ -35,6 +35,7 @@
 .photo-speaker-container {
     display: flex;
     align-items: center;
+    
 }
 
 
@@ -46,6 +47,8 @@
     border-radius: 50%;
     margin-right: 0.5rem;
     object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 1024px) { /* Tablet y dispositivos más pequeños */
@@ -55,6 +58,8 @@
     .photo-speaker {
         margin-bottom: 10px;
         margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }

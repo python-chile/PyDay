@@ -120,7 +120,7 @@ export default () => {
         profileDiv.className = "d-flex align-items-center";
 
         const photosDiv = document.createElement("div");
-        photosDiv.className = "photo-speaker-container";
+        photosDiv.className = "photo-speaker-container col-md-2";
 
         const mediaDiv = document.createElement("div");
 
