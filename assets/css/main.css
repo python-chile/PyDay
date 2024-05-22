@@ -280,3 +280,96 @@
     }
 }
 
+/* Estilos para la sección de Eventos Pasados */
+#eventos-pasados {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+#eventos-pasados h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+.event-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-card {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  /*   background-color: #fff; Fondo blanco para separar las imágenes del fondo general */
+    background-color: #e9ecef;
+
+    padding: 1rem;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color:#c1daf0 ;
+}
+
+.event-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.event-card:hover .event-img {
+    transform: scale(1.05);
+}
+
+.event-title {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #343a40;
+}
+
+@media (max-width: 767px) {
+    .col-6{
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .event-img {
+        height: 250px;
+    }
+
+    .event-title {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .event-img {
+        height: 250px;
+        
+    }
+}
+
+/* Estilos para la sección de Organizador */
+#organizador {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+#organizador h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+#organizador p {
+    font-size: 1.25rem;
+}
+
+#organizador img {
+    max-width: 100%;
+    height: auto;
+}
