@@ -40,6 +40,18 @@
 }
 
 
+@media (max-height: 767px) {
+    .logo-overlay .logo {
+        max-height: 200px;
+        max-width: auto;
+    }
+    
+    .logo-overlay .logoCopiapo  {
+        max-height: 200px;
+        max-width: auto;
+    }
+}
+
 /* Asegura que el header tenga una posición relativa para el logo overlay */
 
 
