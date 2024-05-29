@@ -55,6 +55,11 @@ export default () => {
         photos: ['Francisca_Munoz.jpeg'],
         category: 'Optimización'},
     {
+        block: '11:15 - 11:25',
+        author: '',
+        title: 'Coffee break',
+        photos: ['break.jpg'],},
+    {
         block: '11:25 - 11:40',
         author: 'Gabriela López',
         title: 'Creación de ambientes digitales de aprendizaje',
