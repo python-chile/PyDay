@@ -94,7 +94,7 @@
     display: inline-block;
 }
 
-.level.Básico {
+.level.Básico, .level.Principiante {
     background: green;
 }
 
@@ -106,7 +106,7 @@
     background: red;
 }
 
-.category.Data {
+.category.Data, .category.Datos {
     background: orange;
 }
 
@@ -117,4 +117,16 @@
 .category.Auto {
     background: #808;
     color: white;
+}
+
+.media-icon {
+    margin: 4px;
+}
+
+.media-icon.instagram {
+    color: purple;
+}
+
+.special-event {
+    font-size: 32px;
 }
