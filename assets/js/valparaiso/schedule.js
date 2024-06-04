@@ -74,7 +74,7 @@ export default () => {
         title: '⚡ Charlas Relámpagos y 🎲 Trivia',
         },
     {
-        block: '16:00 - 16:20',
+        block: '16:20 - 16:40',
         title: '🌅 Cierre',
         },
 
