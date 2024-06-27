@@ -48,7 +48,8 @@ export default () => {
         level: 'Intermedio',
         category: 'Ciencia',
         //twitter: 'xhenryx14',
-        //linkedin: 'hernaldo-henriquez'},
+        //linkedin: 'hernaldo-henriquez'
+        },
     {
         block: '14:45 - 15:15',
         author: 'Oscar Cariceo',
