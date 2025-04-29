@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/*
+  Esquema de color basado en el logo "PYDAY".
+
+*/
+
+:root {
+  --primary-green: #3D8B37;
+  /* Cuerpo de la serpiente */
+  --accent-yellow: #FFE141;
+  /* Panza en tono intermedio */
+  --text-white: #FFFFFF;
+  /* Texto principal */
+  --outline-red: #F23939;
+  /* Contorno del texto en tono intermedio */
+  --bg-dark: #101010;
+  /* Fondo oscuro intermedio */
+
+  --primary-green-rgb: 61, 139, 55;
+  --accent-yellow-rgb: 255, 225, 65;
+  --outline-red-rgb: 242, 57, 57;
+  --bg-dark-rgb: 16, 16, 16;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+.bg-primary-green\/20 {
+  background-color: rgba(var(--primary-green-rgb), 0.2);
+}
+
+.bg-accent-yellow\/20 {
+  background-color: rgba(var(--accent-yellow-rgb), 0.2);
+}
+
+.gradient-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 50%, var(--outline-red) 100%);
+  background-size: 400% 400%;
+  background-blend-mode: darken;
+  animation: gradient 18s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo-text {
+  font-family: sans-serif;
+  color: var(--text-white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--outline-red);
+  text-align: center;
+}
+
+/* Componentes reutilizables */
+@layer components {
+
+  .btn-primary {
+    @apply px-6 py-3 bg-transparent border-2 text-white font-bold rounded-full transition duration-300 ease-in-out shadow-lg hover:shadow-xl hover:-translate-y-1;
+    border-color: var(--primary-green);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-green);
+    color: var(--text-white);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-white/20;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-center;
+  }
+
+  .container-py {
+    @apply max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8;
+  }
+
+  .select-theme {
+    background-color: rgba(var(--bg-dark), 0.3);
+    border: 1px solid rgba(var(--primary-green), 0.2);
+    @apply text-[var(--text-white)] rounded-lg px-4 py-2.5 pr-8 text-sm md:text-base transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] hover:border-[var(--primary-green)];
+  }
+
+  .select-theme option {
+    background-color: var(--primary-green);
+    color: var(--primary-green) !important;
+    border: var(--primary-green) !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .select-theme option:hover,
+  .select-theme option:checked {
+    background-color: rgba(var(--accent-yellow) 0.3) !important;
+    color: var(--text-white) !important;
+  }
+
+  /* Tarjetas de sponsors con colores de marca */
+  .sponsors-card {
+    @apply relative p-4 md:p-6 transition-all duration-300 rounded-2xl backdrop-blur-lg border border-white/15 hover:border-[var(--accent-yellow)]/30 transform-gpu cursor-pointer;
+    background: linear-gradient(135deg, rgba(var(--primary-green-rgb), 0.08), rgba(var(--accent-yellow-rgb), 0.08));
+  }
+
+  .sponsors-card:hover {
+    @apply shadow-lg -translate-y-1;
+    background: linear-gradient(135deg, rgba(var(--primary-green-rgb), 0.12), rgba(var(--accent-yellow-rgb), 0.12));
+    box-shadow: 0 0 25px rgba(var(--accent-yellow-rgb), 0.2);
+  }
+
+  /* Contenedor principal de sponsors */
+  .sponsors-container {
+    @apply max-w-6xl mx-auto rounded-3xl backdrop-blur-md border transition-shadow duration-500;
+    background: linear-gradient(135deg,
+        rgba(var(--primary-green-rgb), 0.15),
+        rgba(var(--accent-yellow-rgb), 0.1),
+        rgba(var(--outline-red-rgb), 0.15));
+    border-color: rgba(var(--primary-green-rgb), 0.3);
+    box-shadow: 0 0 60px -15px rgba(var(--primary-green-rgb), 0.35);
+  }
+
+  .sponsors-container:hover {
+    box-shadow: 0 0 80px -20px rgba(var(--primary-green-rgb), 0.45);
+  }
+
+  /* Efectos para los logos de sponsors */
+  .sponsor-logo-effect {
+    @apply relative;
+  }
+
+  .sponsor-logo-effect::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 z-0;
+    background: radial-gradient(circle at center, rgba(var(--accent-yellow-rgb), 0.3), transparent 70%);
+  }
+
+  .sponsor-logo-effect:hover::before {
+    @apply opacity-30;
+  }
+
+  /* Mejora de visibilidad para logos */
+  .sponsor-logo {
+    filter: brightness(115%) contrast(105%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+  }
+
+  .sponsor-logo:hover {
+    filter: brightness(120%) contrast(110%) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  }
+}
