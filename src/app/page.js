@@ -24,7 +24,7 @@ const cities = [
   },
   {
     name: "Santiago",
-    date: "06 de Junio, 2025",
+    date: "6 de Junio, 2025",
     slug: "santiago",
     mapCoords: { x: 58, y: 200 },
   },
