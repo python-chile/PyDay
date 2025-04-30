@@ -146,7 +146,7 @@ export default function RegistrationForm() {
     }
   };
   return (
-    <div className="max-w-md mx-auto bg-white/5 p-6 rounded-lg shadow-md">
+    <div className="max-w-md mx-auto bg-white/5 p-6 rounded-lg shadow-md hide">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Regístrate para PyDay 2025
       </h2>

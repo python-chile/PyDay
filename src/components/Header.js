@@ -75,7 +75,7 @@ export default function Header() {
             <Link href="/talks" className="text-py-text hover:text-py-yellow transition-colors">Charlas</Link>
             <Link href="/multimedia" className="text-py-text hover:text-py-yellow transition-colors">Multimedia</Link>
             <Link href="/previous-editions" className="text-py-text hover:text-py-yellow transition-colors">Ediciones Anteriores</Link>
-            <Link href="/register" className="px-4 py-2 text-py-text transition-colors rounded-full font-medium">Registrarse</Link>
+            <Link href="/register" className="px-4 py-2 text-py-text transition-colors rounded-full font-medium hide">Registrarse</Link>
           </nav>
         </div>
         

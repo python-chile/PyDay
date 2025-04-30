@@ -1,6 +1,22 @@
 import allTalks from "./talks";
 
 const cityData = {
+  santiago: {
+    name: "Santiago",
+    date: "6 de Junio, 2025",
+    venue: "DUOC UC, Sede San Joaquín",
+    address: "Av. Vicuña Mackenna 4917, San Joaquín, Chile",
+    image: "/images/cities/santiago.webp",
+    mapUrl: "https://maps.app.goo.gl/VurFsaQhfD2hivrSA",
+    embedMap:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.049828297318!2d-70.61886772390879!3d-33.50008070005618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses-419!2scl!4v1721433553127!5m2!1ses-419!2scl",
+    transportation: [
+      "Metro: Estación San Joaquín (Línea 5)",
+      "Buses del Transantiago: 210, 213e",
+      "Estacionamiento disponible en Pontificia Universidad Católica de Chile Campus San Joaquín, costo $10.000 app por día",
+    ],
+    schedule: allTalks.filter((talk) => talk.city === "santiago"),
+  },
   valparaiso: {
     name: "Valparaíso",
     date: "13 de Junio, 2025, 10:00 AM - 17:00 PM",
@@ -23,22 +39,6 @@ const cityData = {
     },
     talkProposalLink: "https://sessionize.com/pyday-valparaiso-2025/",
     schedule: allTalks.filter((talk) => talk.city === "valparaiso"),
-  },
-  santiago: {
-    name: "Santiago",
-    date: "6 de Junio, 2025",
-    venue: "DUOC UC, Sede San Joaquín",
-    address: "Av. Vicuña Mackenna 4917, San Joaquín, Chile",
-    image: "/images/cities/santiago.webp",
-    mapUrl: "https://maps.app.goo.gl/VurFsaQhfD2hivrSA",
-    embedMap:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.049828297318!2d-70.61886772390879!3d-33.50008070005618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses-419!2scl!4v1721433553127!5m2!1ses-419!2scl",
-    transportation: [
-      "Metro: Estación San Joaquín (Línea 5)",
-      "Buses del Transantiago: 210, 213e",
-      "Estacionamiento disponible en Pontificia Universidad Católica de Chile Campus San Joaquín, costo $10.000 app por día",
-    ],
-    schedule: allTalks.filter((talk) => talk.city === "santiago"),
   },
   copiapo: {
     name: "Copiapó",

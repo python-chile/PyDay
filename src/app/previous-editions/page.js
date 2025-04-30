@@ -92,8 +92,8 @@ export default function PreviousEditionsPage() {
                     </SmartButton>
 
                     <SmartButton
-                      href={event.webpageLink}
-                      isAvailable={!!event.webpageLink}
+                      href={`/${event.year}`}
+                      isAvailable="true"
                     >
                       Sitio Web {event.year}
                     </SmartButton>

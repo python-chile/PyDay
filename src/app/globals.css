@@ -11,6 +11,8 @@
   --accent-yellow: #FFE141;
   /* Panza en tono intermedio */
   --text-white: #FFFFFF;
+  /* Texto banner */
+  --text-black: #000000;
   /* Texto principal */
   --outline-red: #F23939;
   /* Contorno del texto en tono intermedio */
@@ -29,7 +31,7 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  color: var(--text-white);
+  color: var(--text-black);
 }
 
 .bg-primary-green\/20 {
@@ -104,12 +106,12 @@ body {
   .select-theme {
     background-color: rgba(var(--bg-dark), 0.3);
     border: 1px solid rgba(var(--primary-green), 0.2);
-    @apply text-[var(--text-white)] rounded-lg px-4 py-2.5 pr-8 text-sm md:text-base transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] hover:border-[var(--primary-green)];
+    @apply text-[var(--text-black)] rounded-lg px-4 py-2.5 pr-8 text-sm md:text-base transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] hover:border-[var(--primary-green)];
   }
 
   .select-theme option {
     background-color: var(--primary-green);
-    color: var(--primary-green) !important;
+    color: var(--text-white) !important;
     border: var(--primary-green) !important;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
@@ -117,7 +119,7 @@ body {
   .select-theme option:hover,
   .select-theme option:checked {
     background-color: rgba(var(--accent-yellow) 0.3) !important;
-    color: var(--text-white) !important;
+    color: var(--text-black) !important;
   }
 
   /* Tarjetas de sponsors con colores de marca */
@@ -171,4 +173,12 @@ body {
   .sponsor-logo:hover {
     filter: brightness(120%) contrast(110%) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
   }
+}
+
+.hide {
+  display: none;
+}
+.btn-primary, .btn-secondary {
+  color: black;
+  border-color: black;
 }
