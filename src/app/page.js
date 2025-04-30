@@ -12,7 +12,7 @@ import featuredTalks from "@/data/featuredTalks";
 const cities = [
   {
     name: "Copiapó",
-    date: "6 de Junio, 2025",
+    date: "20 de Junio, 2025",
     slug: "copiapo",
     mapCoords: { x: 50, y: 90 },
   },
@@ -24,7 +24,7 @@ const cities = [
   },
   {
     name: "Santiago",
-    date: "20 de Junio, 2025",
+    date: "06 de Junio, 2025",
     slug: "santiago",
     mapCoords: { x: 58, y: 200 },
   },
@@ -93,7 +93,7 @@ export default function Home() {
             <h3 className="text-lg md:text-xl font-bold mb-2">
               ¡Próximamente charlas increíbles!
             </h3>
-            <p className="text-white/80 mb-6 text-sm md:text-base">
+            <p className="text-black/80 mb-6 text-sm md:text-base">
               Estamos preparando un programa lleno de contenido interesante para
               la comunidad Python. ¡Mantente atento a las actualizaciones!
             </p>
@@ -129,7 +129,7 @@ export default function Home() {
 
       {/* Registro Section */}
       <section id="registro" className="container-py">
-        <h2 className="section-title">Regístrate</h2>
+        <h2 className="section-title">Regístro Próximamente</h2>
         <div className="max-w-xl mx-auto px-13">
           <RegistrationForm />
         </div>
@@ -149,7 +149,7 @@ export default function Home() {
             charlas inspiradoras, talleres prácticos y hackatones, éste día es
             para colaborar y disfrutar de un ambiente lleno de entusiasmo.
           </p>
-          <div className="mt-8 inline-block px-8 py-3 bg-transparent text-white font-bold text-xl cursor-default">
+          <div className="mt-8 inline-block px-8 py-3 bg-transparent text-black font-bold text-xl cursor-default">
             Evento 100% Gratuito
           </div>
         </div>
