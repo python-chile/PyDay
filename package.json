@@ -1,0 +1,29 @@
+{
+  "name": "pyday2-2025",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "export": "next output",
+    "start": "next start",
+    "lint": "next lint",
+    "clean-build": "rd /s /q .next && npm run build && xcopy /E /I public\\images .next\\static\\images"
+  },
+  "dependencies": {
+    "firebase": "^11.6.0",
+    "framer-motion": "^12.8.0",
+    "next": "^15.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4.1.4"
+  }
+}
