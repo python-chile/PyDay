@@ -149,7 +149,7 @@ export default function Home() {
             charlas inspiradoras, talleres prácticos y hackatones, éste día es
             para colaborar y disfrutar de un ambiente lleno de entusiasmo.
           </p>
-          <div className="mt-8 inline-block px-8 py-3 bg-transparent text-black font-bold text-xl cursor-default">
+          <div className="mt-8 inline-block px-8 py-3 bg-transparent text-white font-bold text-xl cursor-default">
             Evento 100% Gratuito
           </div>
         </div>

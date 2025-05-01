@@ -31,7 +31,7 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  color: var(--text-black);
+  color: var(--text-white);
 }
 
 .bg-primary-green\/20 {
@@ -106,7 +106,7 @@ body {
   .select-theme {
     background-color: rgba(var(--bg-dark), 0.3);
     border: 1px solid rgba(var(--primary-green), 0.2);
-    @apply text-[var(--text-black)] rounded-lg px-4 py-2.5 pr-8 text-sm md:text-base transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] hover:border-[var(--primary-green)];
+    @apply text-[var(--text-white)] rounded-lg px-4 py-2.5 pr-8 text-sm md:text-base transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] hover:border-[var(--primary-green)];
   }
 
   .select-theme option {
@@ -119,7 +119,7 @@ body {
   .select-theme option:hover,
   .select-theme option:checked {
     background-color: rgba(var(--accent-yellow) 0.3) !important;
-    color: var(--text-black) !important;
+    color: var(--text-white) !important;
   }
 
   /* Tarjetas de sponsors con colores de marca */
@@ -179,6 +179,6 @@ body {
   display: none;
 }
 .btn-primary, .btn-secondary {
-  color: black;
-  border-color: black;
+  color: white;
+  border-color: white;
 }

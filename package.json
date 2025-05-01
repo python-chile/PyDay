@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "export": "next export",
+    "export": "next output",
     "start": "next start",
     "lint": "next lint",
     "clean-build": "rd /s /q .next && npm run build && xcopy /E /I public\\images .next\\static\\images"
