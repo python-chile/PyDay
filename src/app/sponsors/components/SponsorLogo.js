@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function SponsorLogo({ src, alt, className }) {
+export default function SponsorLogo({ src, alt, className, url }) {
   return (
     <motion.div
       className={className}
@@ -15,21 +15,23 @@ export default function SponsorLogo({ src, alt, className }) {
       
       {/* Contenedor de imagen */}
       <div className="relative z-10 p-2">
-        <Image
-          src={src}
-          alt={alt}
-          width={160}
-          height={80}
-          className="mx-auto transform-gpu transition-all duration-500
-            filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]
-            group-hover:scale-105 group-hover:drop-shadow-[0_4px_8px_rgba(0,0,0,0.25)]
-            group-hover:brightness-110"
-          style={{
-            filter: "brightness(115%) contrast(105%)",
-            maxWidth: "100%",
-            height: "auto",
-          }}
-        />
+        <a href={url} target="_blank">
+          <Image
+            src={src}
+            alt={alt}
+            width={160}
+            height={80}
+            className="mx-auto transform-gpu transition-all duration-500
+              filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]
+              group-hover:scale-105 group-hover:drop-shadow-[0_4px_8px_rgba(0,0,0,0.25)]
+              group-hover:brightness-110"
+            style={{
+              filter: "brightness(115%) contrast(105%)",
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        </a>
       </div>
       
       {/* Halo sutil alrededor del logo */}

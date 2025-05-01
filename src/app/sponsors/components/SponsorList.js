@@ -63,6 +63,7 @@ export default function SponsorList() {
               key={sponsor._id}
               src={sponsor.logo.asset.url}
               alt={sponsor.name}
+              url={sponsor.url}
               className="group relative p-4 md:p-6 bg-gradient-to-br from-[var(--primary-green)]/8 via-[var(--accent-yellow)]/5 to-[var(--primary-green)]/8 
         backdrop-blur-lg rounded-2xl transition-all duration-500 hover:duration-300
         hover:shadow-[0_0_40px_-10px_rgba(61,139,55,0.4)]

@@ -106,53 +106,6 @@ export default function Home() {
         </h2>
         {/* FIXME: Escoger formato de Patrocinadores */}
         <SponsorList />
-        {/* Patrocinadores Premium */}
-        {/* <div className="mt-8">
-          <h3 className="text-2xl font-bold text-center mb-6 text-yellow-400">
-            Patrocinadores Premium
-          </h3>
-          <div className="flex justify-center">
-            <a
-              href="https://www.python.org/psf-landing/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur p-6 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
-            >
-              <div className="relative h-32 w-64">
-                <Image
-                  src="/images/logos/psf-logo.webp"
-                  alt="Python Software Foundation"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </a>
-          </div>
-        </div> */}
-
-        {/* Patrocinadores Básico */}
-        {/* <div className="mt-12">
-          <h3 className="text-2xl font-bold text-center mb-6 text-gray-300">
-            Patrocinadores Básico
-          </h3>
-          <div className="flex justify-center">
-            <a
-              href="https://aws.amazon.com/es/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur p-6 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
-            >
-              <div className="relative h-24 w-48">
-                <Image
-                  src="/images/logos/aws.webp"
-                  alt="Amazon Web Services"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </a>
-          </div>
-        </div> */}
 
         {/* CTA para patrocinadores */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
