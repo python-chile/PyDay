@@ -1,7 +1,9 @@
 import { Inter, Open_Sans, Open_Sans_Condensed } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { MaintenanceBanner } from "@/components/FeatureManagement/MaintenanceBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#21b702", 
+  themeColor: "#21b702",
 };
 
 export const metadata = {
@@ -35,7 +37,9 @@ export const metadata = {
     "Charlas",
     "Hackathon",
   ],
-  authors: [{ name: "Comunidad Python Chile", url: "https://pyday.vercel.app/" }],
+  authors: [
+    { name: "Comunidad Python Chile", url: "https://pyday.vercel.app/" },
+  ],
   creator: "Comunidad Python Chile",
   publisher: "Comunidad Python Chile",
   robots: {
@@ -105,7 +109,7 @@ export const metadata = {
         alt: "PyDay Chile 2025 - Un día de Python en tu ciudad",
       },
       // {
-      //   url: "https://pyday.vercel.app/images/logo_bg.png", 
+      //   url: "https://pyday.vercel.app/images/logo_bg.png",
       //   width: 500,
       //   height: 500,
       //   alt: "Logo PyDay Chile",
@@ -141,11 +145,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${openSans.variable} overflow-x-hidden min-h-screen flex flex-col text-py-text`}>
-        <div className="fixed inset-0 -z-10 gradient-bg" />
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+      <body
+        className={`${openSans.variable} overflow-x-hidden min-h-screen flex flex-col text-text-white`}
+      >
+        <Suspense fallback={<div>Cargando...</div>}>
+          <div className="fixed inset-0 -z-10 gradient-bg" />
+          <Header />
+          <main className="flex-grow">
+            <MaintenanceBanner />
+            {children}
+          </main>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

@@ -61,7 +61,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black/40 backdrop-blur-md py-8 mt-auto border-t border-black/10">
+    <footer className="bg-black/40 backdrop-blur-md py-8 mt-auto border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Otros contenidos del footer */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -83,13 +83,40 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/codigo-conducta"
+                  href="/conduct"
                   className="text-white/90 hover:text-accent-yellow transition-colors duration-200"
                 >
                   Código de conducta
                 </Link>
               </li>
-              {/* Otros enlaces */}
+              <li>
+                <Link
+                  href="/previous"
+                  className="text-white/90 hover:text-accent-yellow transition-colors duration-200"
+                >
+                  Ediciones anteriores
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/multimedia"
+                  className="text-white/90 hover:text-accent-yellow transition-colors duration-200"
+                >
+                  Multimedia
+                </Link>
+              </li>
+
+              <li>
+                <a
+                  href="https://pythonchile.cl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 hover:text-accent-yellow transition-colors duration-200"
+                >
+                  Python Chile
+                </a>
+              </li>
             </ul>
           </div>
           {/* Redes sociales */}
@@ -111,7 +138,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-black/10 text-sm text-center text-white/70">
+        <div className="mt-8 pt-6 border-t border-white/10 text-sm text-center text-white/70">
           <p>
             &copy; {new Date().getFullYear()} Python Chile. Todos los derechos
             reservados.

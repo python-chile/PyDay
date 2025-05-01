@@ -1,4 +1,6 @@
-# Dependencies
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -8,37 +10,37 @@
 !.yarn/releases
 !.yarn/versions
 
-# Testing
+# testing
 /coverage
 
-# Next.js build files
+# next.js
 /.next/
-./out/
+/out/
 
-# Production build
+# production
 /build
 
-# Miscellaneous
+# misc
 .DS_Store
 *.pem
 
-# Debug logs
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# Environment files (opt-in for committing if needed)
-/.env*
+# env files (can opt-in for committing if needed)
+.env*
 
-# Vercel deployment settings
-/.vercel
+# vercel
+.vercel
 
-# TypeScript cache
+# typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# Firebase configuration
-/.firebase
-/.firebaserc
+# firebase
+.firebase/          
+.firebaserc         
 firebase-config.js

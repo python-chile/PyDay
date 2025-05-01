@@ -129,7 +129,7 @@ export default function RegistrationForm() {
             "¡Registro exitoso! Verifica tu correo para la confirmación.",
         });
         setIsSubmitting(false);
-
+        // FIXME: Corregir lo de este link:
         if (formData.sendCFP) {
           window.open(
             "https://sessionize.com/pyday-valparaiso-2025/",
@@ -146,7 +146,7 @@ export default function RegistrationForm() {
     }
   };
   return (
-    <div className="max-w-md mx-auto bg-white/5 p-6 rounded-lg shadow-md hide">
+    <div className="max-w-md mx-auto bg-white/5 p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Regístrate para PyDay 2025
       </h2>
