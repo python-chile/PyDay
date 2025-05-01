@@ -1,15 +1,44 @@
-name: CI
+name: Deploy PyDay
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  deploy-prod:
-    if: github.ref == 'refs/heads/main'
-    runs-on: [ubuntu-latest]
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Push to server
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Checkout codigo
+        uses: actions/checkout@v4
+
+      - name: Ruta actual de trabajo
+        run: |
+          echo "Ruta actual de app pyday: $(pwd)"
+          ls -la
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalacion dependencies & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Copia archivos hacia droplet
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.PYDAY_SERVER }}
+          username: ${{ secrets.PYDAY_USER }}
+          password: ${{ secrets.PYDAY_PASS }}
+          port: ${{ secrets.PYDAY_PORT }}
+          source: ".next/,public,next.config.js,package.json,package-lock.json"
+          target: "/home/pyday"
+
+      - name: Iniciar app con PM2 en el servidor
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.PYDAY_SERVER }}
           username: ${{ secrets.PYDAY_USER }}
@@ -17,5 +46,6 @@ jobs:
           port: ${{ secrets.PYDAY_PORT }}
           script: |
             cd /home/pyday
-            ls -l
-            sh deploy.sh
+            npm install --omit=dev
+            pm2 delete pyday || true
+            pm2 start npm --name "pyday" -- start
