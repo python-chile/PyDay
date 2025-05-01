@@ -88,6 +88,65 @@ pyday-frontend/
 - `tailwindcss@4.1`: Utility-first CSS
 - `framer-motion@10.16.0`: Smooth animations
 
+
+## 🚦 Feature Management
+
+Controla la visibilidad de funcionalidades mediante variables de entorno:
+
+```env
+# .env.local
+NEXT_PUBLIC_FEATURE_REGISTRATION="false"    # Formulario de registro general
+NEXT_PUBLIC_FEATURE_SPONSORS="true"        # Sección completa de patrocinios
+NEXT_PUBLIC_FEATURE_SPONSOR_FORM="false"   # Formulario de patrocinio específico
+```
+
+### Variables Disponibles
+| Variable                          | Descripción                                  | Valores Válidos |
+|-----------------------------------|----------------------------------------------|-----------------|
+| `NEXT_PUBLIC_FEATURE_REGISTRATION` | Habilita formulario de registro principal    | `true`/`false`  |
+| `NEXT_PUBLIC_FEATURE_SPONSORS`     | Muestra sección completa de patrocinios      | `true`/`false`  |
+| `NEXT_PUBLIC_FEATURE_SPONSOR_FORM` | Activa formulario de contacto para patrocinios | `true`/`false` |
+
+### Flujo de Trabajo Recomendado
+1. **Configurar variables** en `.env.local` (usar `true`/`false`)
+2. **Reiniciar servidor** después de cambios
+3. **Los CTAs alternativos** se mostrarán automáticamente cuando:
+   - Una funcionalidad está deshabilitada (`false`)
+   - Existe un link externo configurado en `cityData.js`
+
+### Para Links Externos
+```javascript
+// Ejemplo en src/data/cities.js
+valparaiso: {
+  talkProposalLink: "https://..." // URL válida habilita CTA automático
+}
+```
+
+**Nota:** Los botones alternativos (CTAs) se muestran solo cuando:
+- La variable correspondiente está en `false`
+- Existe un link configurado en los datos de la ciudad
+
+**Cambios realizados:**
+1. Sección dedicada a gestión de features
+2. Tabla clara de variables
+3. Explicación del comportamiento automático
+4. Ejemplo práctico de configuración
+5. Guía visual para no técnicos
+
+
+**Version final del archivo .env.local:**
+```env
+# CONFIGURACIÓN DE FUNCIONALIDADES
+# Valores permitidos: "true" (activado) | "false" (desactivado)
+
+NEXT_PUBLIC_FEATURE_REGISTRATION="false"
+NEXT_PUBLIC_FEATURE_SPONSORS="true"
+NEXT_PUBLIC_FEATURE_SPONSOR_FORM="false"
+
+# URL BASE DEL SITIO (no modificar en desarrollo)
+NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+```
+
 ## 🌍 Contributing
 
 We welcome community contributions! Please see our [Contribution Guidelines](docs/CONTRIBUTING.md) and review our [Photography Style Guide](docs/guia-fotografia.md) for asset submissions.

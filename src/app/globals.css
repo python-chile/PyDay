@@ -1,8 +1,8 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
 /*
   Esquema de color basado en el logo "PYDAY".
-
 */
 
 :root {
@@ -11,8 +11,6 @@
   --accent-yellow: #FFE141;
   /* Panza en tono intermedio */
   --text-white: #FFFFFF;
-  /* Texto banner */
-  --text-black: #000000;
   /* Texto principal */
   --outline-red: #F23939;
   /* Contorno del texto en tono intermedio */
@@ -21,6 +19,7 @@
 
   --primary-green-rgb: 61, 139, 55;
   --accent-yellow-rgb: 255, 225, 65;
+  --text-white-rgb: 255, 255, 255;
   --outline-red-rgb: 242, 57, 57;
   --bg-dark-rgb: 16, 16, 16;
 }
@@ -44,7 +43,7 @@ body {
 
 .gradient-bg {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 0.1)),
     linear-gradient(135deg, var(--primary-green) 0%, var(--accent-yellow) 50%, var(--outline-red) 100%);
   background-size: 400% 400%;
   background-blend-mode: darken;
@@ -76,6 +75,15 @@ body {
 
 /* Componentes reutilizables */
 @layer components {
+
+  /* Menú */
+  /* Para otros navegadores (no Firefox) */
+  @supports not (-moz-appearance: none) {
+    .mobile-menu-container {
+      background: rgba(var(--text-white-rgb), 0%);
+      position: relative;
+    }
+  }
 
   .btn-primary {
     @apply px-6 py-3 bg-transparent border-2 text-white font-bold rounded-full transition duration-300 ease-in-out shadow-lg hover:shadow-xl hover:-translate-y-1;
@@ -111,7 +119,7 @@ body {
 
   .select-theme option {
     background-color: var(--primary-green);
-    color: var(--text-white) !important;
+    color: var(--primary-green) !important;
     border: var(--primary-green) !important;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
@@ -173,12 +181,24 @@ body {
   .sponsor-logo:hover {
     filter: brightness(120%) contrast(110%) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
   }
-}
 
-.hide {
-  display: none;
-}
-.btn-primary, .btn-secondary {
-  color: white;
-  border-color: white;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .scroll-mt-24 {
+    scroll-margin-top: 6rem;
+  }
 }

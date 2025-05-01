@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   transpilePackages: ["framer-motion"],
   trailingSlash: true,
   images: {
@@ -18,7 +17,7 @@ const nextConfig = {
     formats: ["image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     minimumCacheTTL: 86400,
-    unoptimized: true,
+    unoptimized: false,
   },
 };
 

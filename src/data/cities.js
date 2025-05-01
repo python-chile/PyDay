@@ -1,21 +1,27 @@
 import allTalks from "./talks";
 
 const cityData = {
-  santiago: {
-    name: "Santiago",
-    date: "6 de Junio, 2025",
-    venue: "DUOC UC, Sede San Joaquín",
-    address: "Av. Vicuña Mackenna 4917, San Joaquín, Chile",
-    image: "/images/cities/santiago.webp",
-    mapUrl: "https://maps.app.goo.gl/VurFsaQhfD2hivrSA",
+  copiapo: {
+    name: "Copiapó",
+    date: "20 de Junio, 2025",
+    venue: "Inacap sede Copiapó",
+    address: "Yumbel 650, Auditorio Edificio B, Copiapó, Chile",
+    image: "/images/cities/copiapo.webp",
+    mapUrl: "https://maps.app.goo.gl/gYxNT6EVaSFsDBT99",
     embedMap:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.049828297318!2d-70.61886772390879!3d-33.50008070005618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses-419!2scl!4v1721433553127!5m2!1ses-419!2scl",
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2579.0365694907086!2d-70.33317677653373!3d-27.360827873691527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9698047547c01749%3A0xb972b1fd182ecc29!2sINACAP%20Sede%20B!5e0!3m2!1ses!2scl!4v1746042745132!5m2!1ses!2scl",
     transportation: [
-      "Metro: Estación San Joaquín (Línea 5)",
-      "Buses del Transantiago: 210, 213e",
-      "Estacionamiento disponible en Pontificia Universidad Católica de Chile Campus San Joaquín, costo $10.000 app por día",
+      "Microbuses: Líneas 1, 12, 2, 4, 5 desde el centro",
+      "Estacionamiento gratuito disponible en el campus",
     ],
-    schedule: allTalks.filter((talk) => talk.city === "santiago"),
+    introduction: {
+      title: "¡Un Día de Python y Mucha Diversión en PyDay Copiapó 2025!",
+      description: "Únete a la segunda edición de este emocionante evento en INACAP sede Copiapó. Disfruta de charlas inspiradoras y un workshop interactivo donde estudiantes, docentes y entusiastas de la región compartirán conocimientos en un ambiente colaborativo y lleno de energía. PyDay Copiapó 2025 es tu oportunidad para aprender, conectar e inspirarte con el poder de Python.",
+      participationInfo: "Participar te permitirá: adquirir nuevas habilidades, conectar con la comunidad tecnológica y descubrir cómo Python puede transformar tu futuro. ¡Te esperamos!",
+      campusImage: "/images/campus/Inacap_Copiapo.webp",
+    },
+    talkProposalLink: "",
+    schedule: allTalks.filter((talk) => talk.city === "copiapo"),
   },
   valparaiso: {
     name: "Valparaíso",
@@ -30,7 +36,6 @@ const cityData = {
       "Metro Valparaíso: Estación Portales (10 min caminando)",
       "Micros 105, 106, 202, 215, 216",
     ],
-    // Nuevos campos para Valparaíso
     introduction: {
       title: "¡Aventúrate en el Mundo de Python en PyDay Valparaíso!",
       description: "Únete a la cuarta edición de este emocionante evento en la Casa Central de la Universidad Técnica Federico Santa María. Disfruta de talleres interactivos y charlas inspiradoras en un ambiente creativo y colaborativo. PyDay Valparaíso 2025 es tu oportunidad para conectar con otros entusiastas, expandir conocimientos y explorar las posibilidades de este poderoso lenguaje de programación.",
@@ -40,22 +45,30 @@ const cityData = {
     talkProposalLink: "https://sessionize.com/pyday-valparaiso-2025/",
     schedule: allTalks.filter((talk) => talk.city === "valparaiso"),
   },
-  copiapo: {
-    name: "Copiapó",
-    date: "20 de Junio, 2025",
-    venue: "Universidad de Atacama",
-    address: "Av. Copayapu 485, Copiapó, Chile",
-    image: "/images/cities/copiapo.webp",
-    mapUrl: "https://maps.app.goo.gl/hy2BivXnuZznMPH4A",
+  santiago: {
+    name: "Santiago",
+    date: "6 de Junio, 2025",
+    venue: "DUOC UC, Sede San Joaquín",
+    address: "Av. Vicuña Mackenna 4917, San Joaquín, Chile",
+    image: "/images/cities/santiago.webp",
+    mapUrl: "https://maps.app.goo.gl/VurFsaQhfD2hivrSA",
     embedMap:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.6087170536957!2d-70.3536574!3d-27.3566988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969803eead8e720d%3A0x40055cd197fbccfc!2sAv.%20Copayapu%20485%2C%201531772%20Copiap%C3%B3%2C%20Atacama!5e0!3m2!1ses-419!2scl!4v1745379956808!5m2!1ses-419!2scl",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.049828297318!2d-70.61886772390879!3d-33.50008070005618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses-419!2scl!4v1721433553127!5m2!1ses-419!2scl",
     transportation: [
-      "Taxis colectivos: Líneas 21, 22 (Campus Universidad)",
-      "Microbuses: Líneas 1, 2, 3 desde el centro",
-      "Estacionamiento gratuito disponible en el campus",
+      "Metro: Estación San Joaquín (Línea 5)",
+      "Buses del Transantiago: 210, 213e",
+      "Estacionamiento disponible en Pontificia Universidad Católica de Chile Campus San Joaquín, costo $10.000 app por día",
     ],
-    schedule: allTalks.filter((talk) => talk.city === "copiapo"),
+    introduction: {
+      title: "¡Bienvenido a la Primera Edición de PyDay Santiago 2025!",
+      description: "Únete a la primera edición de PyDay Santiago 2025, un evento lleno de aprendizaje, innovación y colaboración en el vibrante mundo de Python. Después de las exitosas Hackatones y PyCon en Santiago, este evento es tu oportunidad para ser parte de una nueva tradición en la ciudad. Disfruta de charlas inspiradoras, talleres interactivos y oportunidades para conectar con otros apasionados por la tecnología.",
+      participationInfo: "Participar te permitirá: adquirir nuevas habilidades, conectar con la comunidad tecnológica local y descubrir cómo Python puede transformar tu futuro. ¡No te lo puedes perder!",
+      campusImage: "/images/campus/DuocUC__San_Joaquín.webp",
+    },
+    talkProposalLink: "https://sessionize.com/pyday-santiago-2025/",
+    schedule: allTalks.filter((talk) => talk.city === "santiago"),
   },
+  
 };
 
 export default cityData;
