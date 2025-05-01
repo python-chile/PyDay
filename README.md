@@ -2,32 +2,32 @@
 
 ![PyDay Banner](public/images/banner-og.jpg)
 
-**The official frontend for PyDay Chile** - A community-driven Python conference showcasing Chile's tech talent through talks, workshops, and networking events across multiple cities.
+**The official frontend for PyDay Chile** – a community-driven Python conference showcasing Chile’s tech talent through talks, workshops, and networking events across multiple cities.
 
 ## ✨ Key Features
 
 ### 📍 Multi-City Experience
-- Dynamic content routing for different conference locations
-- Interactive map showing participating cities
-- City-specific schedules and venue information
+- Dynamic content routing for different conference locations  
+- Interactive map showing participating cities  
+- City-specific schedules and venue details  
 
 ### 📸 Multimedia Hub
-- Responsive image gallery with lazy loading
-- Full-screen modal viewer with keyboard navigation
-- Organized historical content by year/location
-- Embedded video section with responsive players
+- Responsive image gallery with lazy loading  
+- Full-screen modal viewer with keyboard navigation  
+- Organized historical content by year and location  
+- Embedded video section with responsive players  
 
 ### 🚀 Modern Web Practices
-- Next.js 13+ App Router implementation
-- Optimized WebP image delivery
-- Responsive UI with Tailwind CSS
-- Accessibility-first components (ARIA labels, keyboard nav)
+- Next.js 13+ App Router implementation  
+- Optimized WebP image delivery  
+- Responsive UI built with Tailwind CSS  
+- Accessibility-first components (ARIA labels, keyboard navigation)  
 
 ### 🎤 Event Features
-- Speaker profiles with social links
-- Interactive schedule with filtering
-- Sponsor showcase with tiered visibility
-- Registration form with validation
+- Speaker profiles with social links  
+- Interactive schedule with filtering  
+- Sponsor showcase with tiered visibility  
+- Registration form with client-side validation  
 
 ## 🛠 Tech Stack
 
@@ -64,88 +64,66 @@ pyday-frontend/
 └── tailwind.config.js # Custom design system
 ```
 
-
 ## 🖼 Image Optimization
 
-| Feature                | Implementation               | Benefit                          |
-|------------------------|------------------------------|----------------------------------|
-| **Modern Formats**     | WebP conversion              | 30% smaller than JPEG            |
-| **Responsive SrcSet**  | Next.js Image component      | Device-appropriate sizes         |
-| **Lazy Loading**       | Intersection Observer API    | Faster initial load              |
-| **Blur Placeholders**  | Dynamic SVG generation       | Smooth loading experience        |
+| Feature               | Implementation              | Benefit                       |
+|-----------------------|-----------------------------|-------------------------------|
+| **Modern Formats**    | WebP conversion             | 30% smaller than JPEG         |
+| **Responsive SrcSet** | Next.js Image component     | Device-appropriate sizes      |
+| **Lazy Loading**      | Intersection Observer API   | Faster initial load           |
+| **Blur Placeholders** | Dynamic SVG generation      | Smooth loading experience     |
 
 ## ♿ Accessibility Commitment
 
-- WCAG 2.1 AA compliant components
-- Semantic HTML structure
-- Keyboard-navigable interfaces
-- Reduced motion preferences support
-- ARIA labels for interactive elements
+- WCAG 2.1 AA-compliant components  
+- Semantic HTML structure  
+- Keyboard-navigable interfaces  
+- Reduced-motion preference support  
+- ARIA labels for interactive elements  
 
 ## 📌 Core Dependencies
 
-- `next@15.3.1`: React framework for production
-- `tailwindcss@4.1`: Utility-first CSS
-- `framer-motion@10.16.0`: Smooth animations
-
+- `next@15.3.1`: React framework for production  
+- `tailwindcss@4.1`: Utility-first CSS  
+- `framer-motion@10.16.0`: Smooth animations  
 
 ## 🚦 Feature Management
 
-Controla la visibilidad de funcionalidades mediante variables de entorno:
+Control feature visibility via environment variables:
 
 ```env
 # .env.local
-NEXT_PUBLIC_FEATURE_REGISTRATION="false"    # Formulario de registro general
-NEXT_PUBLIC_FEATURE_SPONSORS="true"        # Sección completa de patrocinios
-NEXT_PUBLIC_FEATURE_SPONSOR_FORM="false"   # Formulario de patrocinio específico
+NEXT_PUBLIC_FEATURE_REGISTRATION="false"   # Main registration form
+NEXT_PUBLIC_FEATURE_SPONSORS="true"       # Full sponsors section
+NEXT_PUBLIC_FEATURE_SPONSOR_FORM="false"  # Individual sponsor inquiry form
 ```
 
-### Variables Disponibles
-| Variable                          | Descripción                                  | Valores Válidos |
-|-----------------------------------|----------------------------------------------|-----------------|
-| `NEXT_PUBLIC_FEATURE_REGISTRATION` | Habilita formulario de registro principal    | `true`/`false`  |
-| `NEXT_PUBLIC_FEATURE_SPONSORS`     | Muestra sección completa de patrocinios      | `true`/`false`  |
-| `NEXT_PUBLIC_FEATURE_SPONSOR_FORM` | Activa formulario de contacto para patrocinios | `true`/`false` |
+### Available Variables
 
-### Flujo de Trabajo Recomendado
-1. **Configurar variables** en `.env.local` (usar `true`/`false`)
-2. **Reiniciar servidor** después de cambios
-3. **Los CTAs alternativos** se mostrarán automáticamente cuando:
-   - Una funcionalidad está deshabilitada (`false`)
-   - Existe un link externo configurado en `cityData.js`
+| Variable                          | Description                                | Valid Values  |
+|-----------------------------------|--------------------------------------------|---------------|
+| `NEXT_PUBLIC_FEATURE_REGISTRATION` | Enables main registration form             | `true`/`false` |
+| `NEXT_PUBLIC_FEATURE_SPONSORS`     | Shows full sponsors section                | `true`/`false` |
+| `NEXT_PUBLIC_FEATURE_SPONSOR_FORM` | Activates sponsor inquiry form             | `true`/`false` |
 
-### Para Links Externos
+### Recommended Workflow
+
+1. **Set variables** in `.env.local` using `true`/`false`.  
+2. **Restart the server** after any changes.  
+3. **Alternate CTAs** automatically display when:  
+   - A feature is disabled (`false`)  
+   - An external link is provided in `cityData.js`  
+
+### External Link Configuration
+
 ```javascript
-// Ejemplo en src/data/cities.js
+// Example in src/data/cities.js
 valparaiso: {
-  talkProposalLink: "https://..." // URL válida habilita CTA automático
+  talkProposalLink: "https://..." // Valid URL enables automatic CTA
 }
 ```
 
-**Nota:** Los botones alternativos (CTAs) se muestran solo cuando:
-- La variable correspondiente está en `false`
-- Existe un link configurado en los datos de la ciudad
-
-**Cambios realizados:**
-1. Sección dedicada a gestión de features
-2. Tabla clara de variables
-3. Explicación del comportamiento automático
-4. Ejemplo práctico de configuración
-5. Guía visual para no técnicos
-
-
-**Version final del archivo .env.local:**
-```env
-# CONFIGURACIÓN DE FUNCIONALIDADES
-# Valores permitidos: "true" (activado) | "false" (desactivado)
-
-NEXT_PUBLIC_FEATURE_REGISTRATION="false"
-NEXT_PUBLIC_FEATURE_SPONSORS="true"
-NEXT_PUBLIC_FEATURE_SPONSOR_FORM="false"
-
-# URL BASE DEL SITIO (no modificar en desarrollo)
-NEXT_PUBLIC_SITE_URL="http://localhost:3000"
-```
+> **Note:** Alternate CTAs appear only when the related feature flag is `false` and a link is configured for that city.
 
 ## 🌍 Contributing
 
@@ -155,4 +133,4 @@ We welcome community contributions! Please see our [Contribution Guidelines](doc
 
 **License**: Apache 2.0 (See [LICENSE](LICENSE))  
 **Maintainer**: PyDay Chile Tech Committee  
-📧 *pyday@pythonchile.cl*
+📧  pyday@pythonchile.cl  
