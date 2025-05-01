@@ -125,6 +125,24 @@ valparaiso: {
 
 > **Note:** Alternate CTAs appear only when the related feature flag is `false` and a link is configured for that city.
 
+## 🚀 Deployment & Production Setup  
+
+**Critical Server Configuration:**  
+For production deployments, follow our [Server Setup Guide](https://docs.google.com/document/d/1NhOyS6ZJwRjL3KeWlyErYBjFYZ47dyMugsyuKcyhJQ0/edit?tab=t.8508vrmeaeq) covering:  
+- Node.js environment requirements  
+- PM2 process management  
+- GitHub Actions integration  
+- Mandatory environment variables  
+- Image optimization pipeline  
+
+**Minimum Requirements:**  
+- Node.js v20+  
+- 2GB RAM minimum  
+- HTTPS configuration  
+
+> 📌 **Admin Note:** The `output: 'export' config is prohibited** - breaks dynamic routes and middleware.  
+> Always use standard Next.js build (`npm run build` + `npm start`).
+> 
 ## 🌍 Contributing
 
 We welcome community contributions! Please see our [Contribution Guidelines](docs/CONTRIBUTING.md) and review our [Photography Style Guide](docs/guia-fotografia.md) for asset submissions.
