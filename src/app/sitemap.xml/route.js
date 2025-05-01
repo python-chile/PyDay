@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 export const revalidate = 3600;
 
 export async function GET() {
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://pyday.vercel.app").replace(/\/$/, '');
+  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://pyday.cl").replace(/\/$/, '');
 
   // Validación de datos
   if (!cityData || typeof cityData !== 'object') {
